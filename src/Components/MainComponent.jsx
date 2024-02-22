@@ -101,7 +101,7 @@ export default function MainComponent() {
             className="relative h-56 w-56 mx-auto"
           >
             <img
-              src="/openweather.png"
+              src="openweather.png"
               alt="card-image"
               className="bg-center absolute h-full w-full border-4 border-orange-500 rounded-xl"
             />
@@ -192,7 +192,7 @@ export default function MainComponent() {
 
                 <div className="flex-1">
                   <img
-                    src={`/code/${tempObject2.list[index].weather[0].icon}.png`}
+                    src={`code/${tempObject2.list[index].weather[0].icon}.png`}
                     alt="Weather Icon"
                     className="mx-auto"
                   />
