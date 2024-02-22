@@ -37,7 +37,7 @@ const hoursArray = [0, 1, 2, 3, 4];
 export default function MainComponent() {
   return (
     <section className="h-lvh w-full relative">
-      <div className="fixed h-lvh w-full bg-cover bg-no-repeat bg-[url('weather.jpg')]" />
+      <div className="fixed h-lvh w-full bg-cover bg-no-repeat bg-[url('/weather.jpg')]" />
 
       <section className="pt-24 px-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col justify-center gap-4">
