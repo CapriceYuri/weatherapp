@@ -28,9 +28,9 @@ export default function MainComponent() {
   const [posts2, setPosts2] = useState([]);
 
   const testurl =
-    "http://api.openweathermap.org/data/2.5/weather?units=imperial&lat=40.7143&lon=-74.006&appid=077dd367c6a0acb81c8216125b655788";
+    "https://api.openweathermap.org/data/2.5/weather?units=imperial&lat=40.7143&lon=-74.006&appid=077dd367c6a0acb81c8216125b655788";
   const testurl2 =
-    "http://api.openweathermap.org/data/2.5/forecast?units=imperial&cnt=20&lat=40.7143&lon=-74.006&appid=077dd367c6a0acb81c8216125b655788";
+    "https://api.openweathermap.org/data/2.5/forecast?units=imperial&cnt=20&lat=40.7143&lon=-74.006&appid=077dd367c6a0acb81c8216125b655788";
 
   useEffect(() => {
     const fetchPosts = async () => {
