@@ -47,7 +47,7 @@ export default function MainComponent() {
     };
     fetchPosts();
 
-    const intervalId = setInterval(fetchPosts, 30000);
+    const intervalId = setInterval(fetchPosts, 10000);
     return () => clearInterval(intervalId);
   }, []);
 
@@ -66,7 +66,7 @@ export default function MainComponent() {
       }
     };
     fetchPosts2();
-    const intervalId2 = setInterval(fetchPosts2, 30000);
+    const intervalId2 = setInterval(fetchPosts2, 10000);
     return () => clearInterval(intervalId2);
   }, []);
 
