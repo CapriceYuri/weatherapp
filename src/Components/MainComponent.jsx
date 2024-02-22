@@ -46,6 +46,9 @@ export default function MainComponent() {
       }
     };
     fetchPosts();
+
+    const intervalId = setInterval(fetchPosts, 30000);
+    return () => clearInterval(intervalId);
   }, []);
 
   useEffect(() => {
@@ -63,6 +66,8 @@ export default function MainComponent() {
       }
     };
     fetchPosts2();
+    const intervalId2 = setInterval(fetchPosts2, 30000);
+    return () => clearInterval(intervalId2);
   }, []);
 
   if (error) {
