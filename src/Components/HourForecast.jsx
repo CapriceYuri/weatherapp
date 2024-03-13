@@ -9,11 +9,13 @@ const hoursArray = [
   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
 ];
 
-export default function HourForecast() {
+export default function HourForecast({ targetLocation }) {
   const [error, setError] = useState();
 
   const [posts2, setPosts2] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  const initialURL = `https://api.openweathermap.org/geo/1.0/direct?q=${targetLocation}&limit=1&appid=077dd367c6a0acb81c8216125b655788`;
 
   const testurl2 =
     "https://api.openweathermap.org/data/2.5/forecast?units=imperial&cnt=20&lat=40.7143&lon=-74.006&appid=077dd367c6a0acb81c8216125b655788";
@@ -23,7 +25,11 @@ export default function HourForecast() {
       setIsLoading(true);
 
       try {
-        const response2 = await fetch(`${testurl2}`);
+        const testingdata = await fetch(`${initialURL}`);
+        const readingData = await testingdata.json();
+        const response2 = await fetch(
+          `https://api.openweathermap.org/data/2.5/forecast?units=imperial&cnt=20&lat=${readingData[0].lat}&lon=${readingData[0].lon}&appid=077dd367c6a0acb81c8216125b655788`
+        );
         const posts2 = await response2.json();
         setPosts2([posts2]);
       } catch (error) {
@@ -33,7 +39,7 @@ export default function HourForecast() {
       }
     };
     fetchPosts2();
-  }, []);
+  }, [targetLocation]);
 
   if (error) {
     return <div>Something went wrong! Please try again.</div>;

@@ -11,10 +11,11 @@ import { articles } from "../DataLogic/AdsArticle";
 export default function SideBarAd() {
   return (
     <div>
-      {articles.map((obj) => (
+      {articles.map((obj, index) => (
         <Card
           shadow={false}
           className="bg-transparent backdrop-blur-xl border-4 border-black mx-auto max-w-[500px] mb-8"
+          key={index}
         >
           <img
             src={obj.img}
