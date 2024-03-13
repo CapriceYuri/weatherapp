@@ -14,7 +14,7 @@ export default function SideBarAd() {
       {articles.map((obj) => (
         <Card
           shadow={false}
-          className="bg-transparent backdrop-blur-xl border-4 border-black mx-auto max-w-[400px] mb-8"
+          className="bg-transparent backdrop-blur-xl border-4 border-black mx-auto max-w-[500px] mb-8"
         >
           <img
             src={obj.img}

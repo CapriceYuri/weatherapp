@@ -2,6 +2,7 @@ import { Card, Typography, CardBody } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import { convertSunTime } from "../DataLogic/FetchAPI";
 import OpenWeatherAd from "./OpenWeatherAd";
+import TheWeatherChannel from "./WeatherChanne";
 
 export default function CurrentWeather() {
   const [error, setError] = useState();
@@ -31,7 +32,7 @@ export default function CurrentWeather() {
     return <div>Something went wrong! Please try again.</div>;
   }
   return (
-    <div className="p-5 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="p-5 w-full grid grid-cols-1 lg:grid-cols-3 gap-4">
       <Card
         shadow={false}
         className="w-full h-full bg-transparent backdrop-blur-md shadow-[inset_0_0_10px_white] mx-auto"
@@ -191,6 +192,7 @@ export default function CurrentWeather() {
         })}
       </Card>
       <OpenWeatherAd />
+      <TheWeatherChannel />
     </div>
   );
 }

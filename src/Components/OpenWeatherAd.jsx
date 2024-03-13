@@ -11,12 +11,12 @@ export default function OpenWeatherAd() {
   return (
     <Card
       shadow={false}
-      className="w-full h-full bg-transparent place-self-start backdrop-blur-md border-orange-500 border-2 "
+      className="w-full h-full bg-transparent place-self-start backdrop-blur-md border-orange-500 border-4 hidden lg:block"
     >
       <CardHeader
         color="blue-gray"
         floated={false}
-        className="relative h-56 w-56 mx-auto"
+        className="relative h-40 w-40 mx-auto"
       >
         <img
           src="openweather.png"
@@ -28,7 +28,7 @@ export default function OpenWeatherAd() {
         <Typography variant="h5" color="orange" className="mb-2">
           OpenWeather API
         </Typography>
-        <Typography color="white">
+        <Typography color="white" variant="small">
           The most reliable weather API that provides access to weather data
           worldwide, making it a top choice for developers and businesses
           seeking weather data. What sets OpenWeather apart is its commitment to
