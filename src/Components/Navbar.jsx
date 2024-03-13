@@ -10,12 +10,15 @@ import {
 
 export default function NavbarNavigation({ onLocationChange }) {
   const [openNav, setOpenNav] = React.useState(false);
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState("New York");
 
   const handleLocationChange = (event) => {
     setLocation(event.target.value);
   };
   function confirmLocation() {
+    if (!location) {
+      return;
+    }
     onLocationChange(location);
   }
 
