@@ -4,6 +4,8 @@ import {
   MobileNav,
   Typography,
   IconButton,
+  Input,
+  Button,
 } from "@material-tailwind/react";
 
 export default function NavbarNavigation() {
@@ -130,6 +132,20 @@ export default function NavbarNavigation() {
         >
           WeatherApp
         </Typography>
+        <div className="relative flex w-full max-w-[24rem]">
+          <Input
+            color="blue-gray"
+            type="email"
+            label="City or Zip Code"
+            className="pr-20"
+            containerProps={{
+              className: "min-w-0",
+            }}
+          />
+          <Button size="sm" className="!absolute right-1 top-1 rounded">
+            Search
+          </Button>
+        </div>
         <div className="hidden lg:block">{navList}</div>
         <IconButton
           variant="text"
